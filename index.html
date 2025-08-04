@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nom de l'entreprise</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<div class="container header-flex">
+<a href="index.html" class="logo-group">
+  <img src="images/logo.png" alt="Logo de l'entreprise" height="50" />
+  <span class="nom-entreprise">SYNOSEN</span>
+</a>
+<nav>
+<ul>
+<li><a href="index.html">Accueil</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="#contact.html">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<section id="slogan" class="section-hero">
+  <div class="container">
+    <h2 class="slogan">"Ensemble, construisons des solutions à la hauteur de votre audace"</h2>
+    <p class="description">
+      SYNOSEN est une entreprise à taille humaine, spécialisée en ingénierie et en conseil en technologies.
+        Nous accompagnons les entreprises et les acteurs publics dans leurs projets les plus stratégiques,
+        en combinant expertise technique, intelligence collective et vision à long terme. Notre force réside 
+        dans notre capacité à intervenir dans des secteurs clés : transport, travaux publics, énergie, 
+        agroalimentaire, et technologies de l’information et de la communication (TIC).
+         <br> Notre mission : Repenser le conseil pour structurer durablement les organisations, et
+          répondre aux défis techniques, humains et environnementaux d’aujourd’hui et de demain.
+    </p>
+    <img src="images\ImageAcceuil.jpg" alt="Photo de l'entreprise ou d'un projet" class="hero-image" />
+  </div>
+</section>
+
+
+<section id="valeurs">
+  <div class="container">
+    <h2 class="section-title">Nos valeurs</h2>
+    <div class="valeurs-flex">
+
+      <div class="valeur-gold">
+        <h3>Synergie</h3>
+        <p>Sans synergie, l’audace devient isolée et inefficace car il n’y a pas de collaboration pour porter les idées plus loin. L’innovation ne pourrait pas être adoptée largement.</p>
+      </div>
+
+      <div class="plus">+</div>
+
+      <div class="valeur-gold">
+        <h3>Audace</h3>
+        <p>Sans audace, la synergie ne sert qu’à rester dans un statu quo, car personne ne prend d’initiative pour transformer le collectif en progrès.</p>
+      </div>
+
+      <div class="plus">+</div>
+
+      <div class="valeur-gold">
+        <h3>Innovation</h3>
+        <p>Sans innovation, la synergie et l’audace deviennent des forces sans finalité : elles ne produisent aucun impact durable.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section id="offres">
+  <div class="container">
+    <h2 class="section-title">Nos offres</h2>
+    <div class="offres-flex">
+
+      <div class="offre">
+        <img src="images\Expertise.png" alt="Expertise et Assistance Technique" />
+        <h3>Expertise & Assistance Technique</h3>
+      </div>
+
+      <div class="offre">
+        <img src="images\48541.png" alt="Formation" />
+        <h3>Formation</h3>
+      </div>
+
+      <div class="offre">
+        <img src="images\Centre.png" alt="Centre de Développement Dédié" />
+        <h3>Centre de Développement Dédié</h3>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="secteurs">
+  <h2>Nos secteurs d’activité</h2>
+  <div class="secteurs-grid">
+    <a href="/defense-transport" class="secteur">
+      <img src="defense.png" alt="Defense & Transport">
+      <span>Transport</span>
+    </a>
+    <a href="/energy-life" class="secteur">
+      <img src="energy.png" alt="Energy & Life Sciences">
+      <span>Energy</span>
+    </a>
+    <a href="/finance-gov" class="secteur">
+      <img src="finance.png" alt="Finance & Government">
+      <span>Travaux Publics</span>
+    </a>
+    <a href="/retail-internet" class="secteur">
+      <img src="retail.png" alt="Retail & Internet Services">
+      <span>Agro-Alimentaires</span>
+    </a>
+    <a href="/telecom-media" class="secteur">
+      <img src="telecom.png" alt="Telecom & Media">
+      <span>Technologie de l’information et de la communication</span>
+    </a>
+  </div>
+</section>
+
+<section id="maps">
+  <div class="container">
+    <h2 class="section-title">Nos implantations</h2>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/d/u/0/embed?mid=1UVFtIjBTYyfx-Tpu9PkHrmfbTb0FScU&ll=14.775261874302917%2C-17.3782133&z=18"
+        width="100%"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="contact">
+  <div class="container">
+    <h2>Contactez-nous</h2>
+    <form action="#" method="post">
+      <label for="nom">Nom</label>
+      <input type="text" id="nom" name="nom" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2025 SYNOSEN. Tous droits réservés.</p>
+    <nav>
+      <a href="/mentions-legales">Mentions légales</a> |
+      <a href="/contact">Contact</a> |
+      <a href="/a-propos">À propos</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.valeur-gold').forEach(function(valeur) {
+    valeur.addEventListener('click', function() {
+      // Retire active sur toutes les valeurs
+      document.querySelectorAll('.valeur-gold').forEach(function(v) {
+        v.classList.remove('active');
+      });
+      // Ajoute active sur la valeur cliquée
+      this.classList.add('active');
+    });
+
+    valeur.addEventListener('mouseleave', function() {
+      this.classList.remove('active');
+    });
+  });
+</script>
+</body>
+</html>
