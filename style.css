@@ -519,7 +519,7 @@ button:hover {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #003366;
+  background-color: rgb(7, 7, 7);
   color: black;
   min-width: 150px;
   z-index: 999;
@@ -538,7 +538,7 @@ button:hover {
   .main-nav {
     position: absolute;
     top: 100%;
-    left: 0;
+    right: 0;
     width: 200px;
     background-color: #002B5C;
     display: none;
