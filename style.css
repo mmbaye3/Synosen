@@ -485,6 +485,51 @@ button:hover {
 
 /* ------ Responsive ------ */
 /* Bouton hamburger */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Menu par défaut (desktop) */
+.main-nav .menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 10px;
+}
+
+/* Dropdown submenu */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #003366;
+  color: black;
+  min-width: 150px;
+  z-index: 999;
+}
+
+.dropdown:hover .submenu {
+  display: block;
+}
+
+/* ----- RESPONSIVE ----- */
 @media screen and (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -493,7 +538,7 @@ button:hover {
   .main-nav {
     position: absolute;
     top: 100%;
-    right: 0; /* ✅ Menu aligné à droite */
+    right: 0;
     width: 200px;
     background-color: #002B5C;
     display: none;
