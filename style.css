@@ -494,7 +494,7 @@ button:hover {
     position: absolute;
     top: 100%;
     right: 0; /* ✅ Menu aligné à droite */
-    width: 200px;
+    width: 100px;
     background-color: #002B5C;
     display: none;
     z-index: 999;
