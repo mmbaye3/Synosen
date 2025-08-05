@@ -533,6 +533,7 @@ button:hover {
 @media screen and (max-width: 768px) {
   .menu-toggle {
     display: block;
+    right: 24px;
   }
 
   .main-nav {
