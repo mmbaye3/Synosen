@@ -542,7 +542,7 @@ button:hover {
   .main-nav {
     position: absolute;
     top: 100%;
-    right: 0;
+    right: 24;
     width: 200px;
     background-color: #002B5C;
     display: none;
