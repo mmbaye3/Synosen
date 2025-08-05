@@ -550,7 +550,7 @@ button:hover {
   }
 
   .main-nav .menu {
-    display: flex;
+    display: none;
     flex-direction: column;
     padding: 0;
     margin: 0;
