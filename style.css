@@ -25,6 +25,7 @@ padding: 20px;
 display: flex;
 justify-content: space-between;
 align-items: center;
+flex-wrap: wrap;
 }
 
 .logo img {
@@ -132,6 +133,7 @@ button:hover {
   align-items: center;
   gap: 10px;
   text-decoration: none;
+  color: white;
 }
 
 .logo-group:hover {
@@ -430,7 +432,7 @@ button:hover {
 }
 
 /* Responsive : ajustement pour mobiles */
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .secteurs-grid {
     gap: 20px;
   }
@@ -460,7 +462,7 @@ button:hover {
   text-decoration: none;
   padding: 10px;
   display: block;
-  color: #000;
+  color: #ffffff;
 }
 
 /* Sous-menu (déroulant) */
