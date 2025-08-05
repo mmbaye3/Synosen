@@ -26,6 +26,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 flex-wrap: wrap;
+position: relative;
 }
 
 .logo img {
@@ -492,7 +493,7 @@ button:hover {
   cursor: pointer;
 }
 
-/* Menu principal */
+/* Menu par défaut (desktop) */
 .main-nav .menu {
   list-style: none;
   display: flex;
@@ -511,7 +512,7 @@ button:hover {
   padding: 10px;
 }
 
-/* Sous-menu */
+/* Dropdown submenu */
 .submenu {
   display: none;
   position: absolute;
@@ -527,34 +528,53 @@ button:hover {
   display: block;
 }
 
-/* ----- Responsive ------ */
-@media (max-width: 768px) {
+/* ----- RESPONSIVE ----- */
+@media screen and (max-width: 768px) {
   .menu-toggle {
     display: block;
   }
 
-  .main-nav .menu {
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    background-color: #002B5C;
     display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #002B5C; /* même fond que ton header */
+    z-index: 999;
   }
 
-  .main-nav.active .menu {
+  .main-nav.active {
+    display: block;
+  }
+
+  .main-nav .menu {
     display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
   }
 
-  .menu li {
+  .main-nav .menu li {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
 
-  .dropdown:hover .submenu {
+  .main-nav .menu a {
+    color: white;
+    padding: 12px;
+  }
+
+  .submenu {
     position: static;
-    display: block;
     background-color: #003366;
   }
 
   .submenu a {
     color: white;
+    padding-left: 20px;
+  }
+
+  .dropdown:hover .submenu {
+    display: block;
   }
 }
