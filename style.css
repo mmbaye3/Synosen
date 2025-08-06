@@ -534,8 +534,8 @@ button:hover {
   .menu-toggle {
     display: block;
     position: absolute;
-    top: 100%;
-    right: 24px;
+    top: 25%;
+    right: 0;
   }
 
   .main-nav {
