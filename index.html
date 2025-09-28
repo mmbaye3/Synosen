@@ -26,11 +26,11 @@
         <a href="services.html">Services</a>
         <ul class="submenu">
           <li><a href="energie.html">Énergie</a></li>
-          <li><a href="environnement.html">Environnement</a></li>
-          <li><a href="construction.html">Construction</a></li>
+          <li><a href="transports.html">Transports</a></li>
+          <li><a href="travaux_Publics.html">Travaux Publics</a></li>
         </ul>
       </li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 </div>
@@ -111,7 +111,7 @@
       <img src="defense.png" alt="Defense & Transport">
       <span>Transport</span>
     </a>
-    <a href="/energy-life" class="secteur">
+    <a href="energie.html" class="secteur">
       <img src="energy.png" alt="Energy & Life Sciences">
       <span>Energy</span>
     </a>
@@ -128,26 +128,7 @@
       <span>Technologie de l’information et de la communication</span>
     </a>
   </div>
-</section>
-
-<section id="maps">
-  <div class="container">
-    <h2 class="section-title">Nos implantations</h2>
-    <div class="map-container">
-      <iframe
-        src="https://www.google.com/maps/d/u/0/embed?mid=1UVFtIjBTYyfx-Tpu9PkHrmfbTb0FScU&ll=14.775261874302917%2C-17.3782133&z=18"
-        width="100%"
-        height="450"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-  </div>
-</section>
-
-
+</section>im
 
 <section id="contact">
   <div class="container">
@@ -172,7 +153,7 @@
     <p>&copy; 2025 SYNOSEN. Tous droits réservés.</p>
     <nav>
       <a href="/mentions-legales">Mentions légales</a> |
-      <a href="/contact">Contact</a> |
+      <a href="#contact">Contact</a> |
       <a href="/a-propos">À propos</a>
     </nav>
   </div>
@@ -198,9 +179,12 @@
   const toggleButton = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.main-nav');
 
-  toggleButton.addEventListener('click', () => {
+  toggleButton.addEventListener('click', (event) => {
+    event.stopImmediatePropagation();
     nav.classList.toggle('active');
   });
+  nav.addEventListener('click',(event) => {event.stopImmediatePropagation();});
+  document.body.addEventListener('click',() => {nav.classList.remove('active');});
 </script>
 </body>
 </html>

@@ -9,35 +9,79 @@
 <body>
 <header>
 <div class="container header-flex">
+  <!-- LOGO + NOM ENTREPRISE à gauche -->
+  <a href="index.html" class="logo-group">
+    <img src="images/logo.png" alt="Logo de l'entreprise" height="50" />
+    <span class="nom-entreprise">SYNOSEN</span>
+  </a>
 
-<a href="index.html" class="logo-group">
-  <img src="images/logo.png" alt="Logo de l'entreprise" height="50" />
-  <span class="nom-entreprise">Nom de l’entreprise</span>
-</a>
-<nav>
-<ul>
-<li><a href="index.html">Accueil</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="index.html#contact">Contact</a></li>
-</ul>
-</nav>
+  <!-- BOUTON HAMBURGER à droite -->
+  <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+
+  <!-- MENU (affiché sous le bouton) -->
+  <nav class="main-nav">
+    <ul class="menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li class="dropdown">
+        <a href="services.html">Services</a>
+        <ul class="submenu">
+          <li><a href="energie.html">Énergie</a></li>
+          <li><a href="environnement.html">Environnement</a></li>
+          <li><a href="construction.html">Construction</a></li>
+        </ul>
+      </li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </nav>
 </div>
 </header>
 
-<section>
-<div class="container">
-<h2>Nos Services</h2>
-<p>Voici les services que nous proposons :</p>
-<ul>
-<li><strong>Service 1 :</strong> Description du service 1</li>
-<li><strong>Service 2 :</strong> Description du service 2</li>
-<li><strong>Service 3 :</strong> Description du service 3</li>
-</ul>
-</div>
+<section class="secteurs">
+  <h2>Nos secteurs d’activité</h2>
+  <div class="secteurs-grid">
+    <a href="/defense-transport" class="secteur">
+      <img src="defense.png" alt="Defense & Transport">
+      <span>Transport</span>
+    </a>
+    <a href="/energy-life" class="secteur">
+      <img src="energy.png" alt="Energy & Life Sciences">
+      <span>Energy</span>
+    </a>
+    <a href="/finance-gov" class="secteur">
+      <img src="finance.png" alt="Finance & Government">
+      <span>Travaux Publics</span>
+    </a>
+    <a href="/retail-internet" class="secteur">
+      <img src="retail.png" alt="Retail & Internet Services">
+      <span>Agro-Alimentaires</span>
+    </a>
+    <a href="/telecom-media" class="secteur">
+      <img src="telecom.png" alt="Telecom & Media">
+      <span>Technologie de l’information et de la communication</span>
+    </a>
+  </div>
 </section>
 
-<footer>
-<p>&copy; 2025 Nom de l'entreprise - Tous droits réservés</p>
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2025 SYNOSEN. Tous droits réservés.</p>
+    <nav>
+      <a href="/mentions-legales">Mentions légales</a> |
+      <a href="/#contact">Contact</a> |
+      <a href="/a-propos">À propos</a>
+    </nav>
+  </div>
 </footer>
+<script>
+  const toggleButton = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.main-nav');
+
+  toggleButton.addEventListener('click', (event) => {
+    event.stopImmediatePropagation();
+    nav.classList.toggle('active');
+  });
+  nav.addEventListener('click',(event) => {event.stopImmediatePropagation();});
+  document.body.addEventListener('click',() => {nav.classList.remove('active');});
+</script>
 </body>
 </html>

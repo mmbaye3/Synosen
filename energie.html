@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nos Services</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<div class="container header-flex">
+  <!-- LOGO + NOM ENTREPRISE à gauche -->
+  <a href="index.html" class="logo-group">
+    <img src="images/logo.png" alt="Logo de l'entreprise" height="50" />
+    <span class="nom-entreprise">SYNOSEN</span>
+  </a>
+
+  <!-- BOUTON HAMBURGER à droite -->
+  <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+
+  <!-- MENU (affiché sous le bouton) -->
+  <nav class="main-nav">
+    <ul class="menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li class="dropdown">
+        <a href="services.html">Services</a>
+        <ul class="submenu">
+          <li><a href="energie.html">Énergie</a></li>
+          <li><a href="environnement.html">Environnement</a></li>
+          <li><a href="construction.html">Construction</a></li>
+        </ul>
+      </li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+</header>
+
+<!-- ======= SECTION ENERGIE ======= -->
+<section class="energy-section" aria-labelledby="energie-title">
+<!-- Si tu as déjà un header global, supprime/ignore le bloc header ci-dessous -->
+<!-- <header class="site-header"> ... ton header existant ... </header> -->
+<h2 id="energie-title" class="energy-title">Energie</h2>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+
+<div class="container energy-inner">
+<!-- Colonne image -->
+
+<figure class="energy-media" aria-hidden="false">
+<img src="images/Energy_2.jpg" alt="Parc éolien, panneaux solaires et centrale hydraulique" />
+</figure>
+
+<!-- Colonne contenu -->
+<div class="energy-content">
+<p class="lead"> Face aux défis climatiques, le secteur énergétique a
+  connu une évolution importante au cours de ces
+  dernières années.
+</p>
+<!-- Bloc texte en deux colonnes -->
+<div class="two-columns">
+<div class="col">
+<p>
+Nos ingénieurs et techniciens vous accompagnent dans ces différentes phases :
+maintenance, installation et dimensionnement d'équipements renouvelables.
+L'approche intègre études d'efficacité énergétique et planification long terme.
+Nous conduisons également des études de fiabilité et sécurité des installations,
+ainsi que des solutions pour le stockage et le transport des matières premières,
+dans le respect des normes.
+</p>
+
+</div>
+
+<!-- Liste bullet points -->
+<ul class="energy-list">
+<li>Maintenance des parcs solaires et éoliens</li>
+<li>Installation des équipements</li>
+<li>Dimensionnement</li>
+<li>Étude d'efficacité énergétique</li>
+<li>Étude de fiabilité et de sécurité des installations</li>
+<li>Stockage et transport des matières premières</li>
+</ul>
+</div>
+</div>
+
+<!-- Si tu as déjà un footer global, supprime/ignore le bloc footer ci-dessous -->
+<!-- <footer class="site-footer"> ... ton footer existant ... </footer> -->
+</section>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2025 SYNOSEN. Tous droits réservés.</p>
+    <nav>
+      <a href="/mentions-legales">Mentions légales</a> |
+      <a href="/#contact">Contact</a> |
+      <a href="/a-propos">À propos</a>
+    </nav>
+  </div>
+</footer>
+<script>
+  const toggleButton = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.main-nav');
+
+  toggleButton.addEventListener('click', (event) => {
+    event.stopImmediatePropagation();
+    nav.classList.toggle('active');
+  });
+  nav.addEventListener('click',(event) => {event.stopImmediatePropagation();});
+  document.body.addEventListener('click',() => {nav.classList.remove('active');});
+</script>
+
+</body>
+</html>

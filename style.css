@@ -115,8 +115,16 @@ button:hover {
   color: #080000;
   max-width: 800px;
   margin: 0 auto 30px auto;
-  line-height: 1.6;
+  line-height: 2;
   text-align: justify;
+}
+
+@media screen and (max-width: 768px)
+{
+  .description {
+    padding-left: 15px;
+    padding-right: 15px;
+}
 }
 
 .hero-image {
@@ -519,7 +527,7 @@ button:hover {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: white;
+  background-color: #002B5B;
   color: black;
   min-width: 150px;
   z-index: 999;
@@ -582,3 +590,192 @@ button:hover {
     display: block;
   }
 }
+
+.energy-section{
+background: #fff;
+color: var(--navy);
+font-family: "Helvetica Neue", Arial, sans-serif;
+}
+.energy-title{
+  font-size: 48px;
+  margin: 0 0 12px 0;
+  color: #D4AF37;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  display: flex;
+  transition: transform 0.5s ease-out;
+  }
+.energy-title:hover{
+  transform: translateX(100px) scale(1);
+}
+
+.energy-inner{
+display: grid;
+grid-template-columns: 1fr 1.1fr; /* image / contenu */
+gap: 32px;
+align-items: start;
+}
+
+/* Media (image) */
+.energy-media{
+margin: 0;
+border-radius: var(--radius);
+overflow: hidden;
+box-shadow: 0 6px 20px rgba(11,59,102,0.06);
+opacity: 1;
+animation: slideInLeft 1s ease-out fordwards;
+
+}
+
+.energy-media img{
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+min-height: 320px; /* adapte selon besoin */
+}
+
+@keyframes slideInLeft{
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Contenu */
+.energy-content{
+padding: 8px 0;
+}
+
+
+.lead {
+  border-right: 2px solid #333;
+  padding-right: 5px;
+  display: inline-block;
+  animation: blink 0.7s step-end infinite;
+  line-height: 1.6;
+  font-size: 20px;
+  }
+
+@keyframes blink{
+  50% { border-color: transparent}
+}
+
+/* Deux colonnes de paragraphes */
+.two-columns{
+  font-size: 20px;
+  margin: 0 0 18px 0;
+  line-height: 1.6;
+  color: #080000;
+  text-align: justify;
+}
+
+
+
+/* Liste */
+.energy-list{
+list-style: disc;
+padding-left: 20px;
+margin: 8px 0 0 0;
+color: var(--navy);
+line-height: 1.6;
+}
+
+.energy-list li{
+margin: 8px 0;
+}
+
+/* Responsive: empiler sur écrans étroits */
+@media (max-width: 880px){
+.energy-inner{
+grid-template-columns: 1fr;
+gap: 20px;
+}
+
+.energy-media img{
+min-height: 200px;
+}
+
+.energy-title{
+font-size: 36px;
+}
+
+.two-columns{
+grid-template-columns: 1fr; /* devient une seule colonne */
+}
+}
+
+/* Petit ajustement mobile */
+@media (max-width:420px){
+.container{
+padding-left: 16px;
+padding-right: 16px;
+}
+
+.transport-title{
+font-size: 28px;
+}
+}
+#test
+{
+  background-color: #003366;
+}
+.container-Transport {
+display: flex;
+justify-content: space-around;
+align-items: center;
+margin: 50px;
+gap: 20px;
+}
+
+.bloc {
+width: 45%;
+padding: 20px;
+background-color: #ffffff;
+border-radius: 8px;
+opacity: 0;
+transform: translateX(0);
+animation-duration: 1s;
+animation-fill-mode: forwards;
+}
+
+.bloc.gauche {
+transform: translateX(-100%);
+animation-name: slideFromLeft;
+}
+
+.bloc.droite {
+transform: translateX(100%);
+animation-name: slideFromRight;
+}
+
+@keyframes slideFromLeft {
+to {
+transform: translateX(0);
+opacity: 1;
+}
+}
+
+@keyframes slideFromRight {
+to {
+transform: translateX(0);
+opacity: 1;
+}
+}
+
+@media (max-width:768px){
+  .container-Transport {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    }
+
+  .bloc {
+    width: 100%;
+    max-width: 400px;
+  }
+  }
