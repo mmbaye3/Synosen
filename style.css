@@ -727,14 +727,15 @@ gap: 20px;
 }
 
 .bloc {
-width: 45%;
+width: 100%;
 padding: 20px;
 background-color: #ffffff;
-border-radius: 8px;
+border-radius: 15px;
 opacity: 0;
 transform: translateX(0);
 animation-duration: 1s;
 animation-fill-mode: forwards;
+min-width: 500px;
 }
 
 .bloc.gauche {
@@ -770,7 +771,7 @@ opacity: 1;
 
   .bloc {
     width: 100%;
-    max-width: 400px;
+    min-width: 400px;
   }
   }
   .Transport-title{
